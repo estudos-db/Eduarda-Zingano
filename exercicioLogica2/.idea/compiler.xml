@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="exercicioLogica3" target="19" />
-    </bytecodeTargetLevel>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="exercicioLogica3" />
+        <module name="exercicioLogica2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="exercicioLogica2" target="19" />
+    </bytecodeTargetLevel>
   </component>
 </project>

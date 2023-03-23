@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90bf5f59-580d-4e87-94fc-2c6b876c0577" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/src/main/java/org/example/Produto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/src/main/java/org/example/ProdutoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicios_logica/exercicioLogica2/src/test/java/org/example/MainTest.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exercicioLogica4/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicioLogica1/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicioLogica1/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicioLogica1/src/test/java/org/example/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicioLogica1/src/test/java/org/example/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicioLogica1/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicioLogica1/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicioLogica3/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicioLogica3/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/git/eduardazingano/exercicioLogica3"
+    "last_opened_file_path": "C:/git/Eduarda-Zingano/exercicioLogica2"
   }
 }]]></component>
   <component name="RecentsManager">

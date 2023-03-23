@@ -1,16 +1,18 @@
 package org.example;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
 
+public class MainTest {
     int idade = 18;
-
     @Test
-    void verificaSeMaiorDeIdade () {
-
+   public void verificaIdade() {
+        boolean expect = idade >= 18;
+        boolean actual = true;
+        Assert.assertEquals(expect,actual);
     }
-
 }
+
+

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47af3f9e-ca6d-4724-ab31-0e71d85b3400" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" /> 
-     
+    <list default="true" id="c809c639-5a65-4e11-9d5b-ade2193aa04c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Tabuada.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/TabuadaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicioLogica4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicioLogica4/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +18,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -35,7 +35,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2NPqSCd8z2q55sDJGykoIuiKVkd" />
+  <component name="ProjectId" id="2NQ8HWxQqqsxsU94CJ3Ohnk4wVW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,25 +44,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/git/Eduarda-Zingano/exercicioLogica4"
+    "last_opened_file_path": "C:/Users/Micro/Downloads/Lilian-Carvalho-feature-exercicio-12/12-combina-ordena-vetores"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="org.example" />
-    </key>
-  </component>
-
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="exercicioLogica4" />
+      <module name="exercicioLogica5" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -82,12 +70,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="47af3f9e-ca6d-4724-ab31-0e71d85b3400" name="Changes" comment="" />
-      <created>1679576064365</created>
+      <changelist id="c809c639-5a65-4e11-9d5b-ade2193aa04c" name="Changes" comment="" />
+      <created>1679584862379</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1679576064365</updated>
-
+      <updated>1679584862379</updated>
     </task>
     <servers />
   </component>

@@ -17,7 +17,7 @@ public class CalculadoraServiceTest {
         calculadoraService.calcula(valorUm = BigDecimal.valueOf(5), valorDois = BigDecimal.valueOf(10), '+');
         BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado, BigDecimal.valueOf(15));
+        Assertions.assertEquals(BigDecimal.valueOf(15), resultado);
     }
 
     @Test

@@ -21,6 +21,6 @@ public class Main {
 
         teclado.close();
 
-       calcular.Calcula(valorUm,valorDois,sinal);
+        calcular.Calcula(valorUm,valorDois,sinal);
     }
 }

@@ -8,59 +8,46 @@ import java.math.BigDecimal;
 
 
 public class CalculadoraServiceTest {
+    CalculadoraService calculadoraService = new CalculadoraService();
     BigDecimal valorUm;
     BigDecimal valorDois;
-    BigDecimal resultado;
+
+    @Test
+    public void verificaSeSoma() {
+        calculadoraService.Calcula(valorUm = BigDecimal.valueOf(5), valorDois = BigDecimal.valueOf(10), '+');
+        BigDecimal resultado = calculadoraService.resultado;
+
+        Assertions.assertEquals(resultado, BigDecimal.valueOf(15));
+    }
 
     @Test
     public void verificaSeMultiplica() {
-        valorUm = BigDecimal.valueOf(5);
-        valorDois = BigDecimal.valueOf(15);
-        resultado = valorUm.multiply(valorDois);
+        calculadoraService.Calcula(valorUm = BigDecimal.valueOf(5), valorDois = BigDecimal.valueOf(15), '*');
+        BigDecimal resultado = calculadoraService.resultado;
 
         Assertions.assertEquals(resultado, BigDecimal.valueOf(75));
     }
 
     @Test
-    public void verificaSeSoma() {
-        valorUm = BigDecimal.valueOf(20);
-        valorDois = BigDecimal.valueOf(10.35);
-        resultado = valorUm.add(valorDois);
+    public void verificaSeSutrai() {
+        calculadoraService.Calcula(valorUm = BigDecimal.valueOf(30), valorDois = BigDecimal.valueOf(15), '-');
+        BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado,BigDecimal.valueOf(30.35));
-    }
-
-    @Test
-    public void verificaSeSubtrai() {
-        valorUm = BigDecimal.valueOf(50.30);
-        valorDois = BigDecimal.valueOf(10.35);
-        resultado = valorUm.subtract(valorDois);
-
-        Assertions.assertEquals(resultado,BigDecimal.valueOf(39.95));
+        Assertions.assertEquals(resultado, BigDecimal.valueOf(15));
     }
 
     @Test
     public void verificaSeDivide() {
-        valorUm = BigDecimal.valueOf(25);
-        valorDois = BigDecimal.valueOf(5);
-        try {
-            resultado = valorUm.divide(valorDois);
-        } catch (ArithmeticException e) {
-            System.out.println("Zero na segunda não pode");
-        }
+        calculadoraService.Calcula(valorUm = BigDecimal.valueOf(25), valorDois = BigDecimal.valueOf(5), '/');
+        BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado,BigDecimal.valueOf(5));
+        Assertions.assertEquals(resultado, BigDecimal.valueOf(5));
     }
 
     @Test
-    public void verificaSeDividePorZero() {
-        valorUm = BigDecimal.valueOf(25);
-        valorDois = BigDecimal.valueOf(0);
-        try {
-            resultado = valorUm.divide(valorDois);
-        } catch (ArithmeticException e) {
-            System.out.println("Zero na segunda não pode");
-        }
+    public void verificaSeNaoDeixaDividirPorZero() {
+        calculadoraService.Calcula(valorUm = BigDecimal.valueOf(25), valorDois = BigDecimal.valueOf(0), '/');
+        BigDecimal resultado = calculadoraService.resultado;
 
         Assertions.assertEquals(resultado, null);
     }

@@ -22,12 +22,8 @@ public class CalculadoraService {
                 System.out.println(valorUm + " - " + valorDois + " = " + resultado);
                 break;
             case '/':
-                try {
-                    resultado = valorUm.divide(valorDois);
-                    System.out.println(valorUm + " / " + valorDois + " = " + resultado);
-                } catch (ArithmeticException e) {
-                    System.out.println("Não é possível dividir, o segundo valor deve ser diferente de zero");
-                }
+                resultado = valorUm.divide(valorDois);
+                System.out.println(valorUm + " / " + valorDois + " = " + resultado);
                 break;
         }
     }

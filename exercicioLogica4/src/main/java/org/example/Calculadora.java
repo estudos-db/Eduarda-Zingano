@@ -29,6 +29,9 @@ public class Calculadora {
     }
 
     public void setValorDois(BigDecimal valorDois) {
+        if(valorDois == BigDecimal.ZERO) {
+            throw new IllegalArgumentException("Não é permitido 0 no segundo valor");
+        }
         this.valorDois = valorDois;
     }
 

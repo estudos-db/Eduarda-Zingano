@@ -6,7 +6,7 @@ public class CalculadoraService {
 
     BigDecimal resultado;
 
-    public void Calcula(BigDecimal valorUm, BigDecimal valorDois, char sinal) {
+    public void calcula(BigDecimal valorUm, BigDecimal valorDois, char sinal) {
 
         switch (sinal) {
             case '*':

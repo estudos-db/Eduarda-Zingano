@@ -25,7 +25,7 @@ public class CalculadoraServiceTest {
         calculadoraService.Calcula(valorUm = BigDecimal.valueOf(5), valorDois = BigDecimal.valueOf(15), '*');
         BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado, BigDecimal.valueOf(75));
+        Assertions.assertEquals(BigDecimal.valueOf(75), resultado);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class CalculadoraServiceTest {
         calculadoraService.Calcula(valorUm = BigDecimal.valueOf(30), valorDois = BigDecimal.valueOf(15), '-');
         BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado, BigDecimal.valueOf(15));
+        Assertions.assertEquals(BigDecimal.valueOf(15), resultado);
     }
 
     @Test
@@ -41,7 +41,7 @@ public class CalculadoraServiceTest {
         calculadoraService.Calcula(valorUm = BigDecimal.valueOf(25), valorDois = BigDecimal.valueOf(5), '/');
         BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado, BigDecimal.valueOf(5));
+        Assertions.assertEquals(BigDecimal.valueOf(5), resultado);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class CalculadoraServiceTest {
         calculadoraService.Calcula(valorUm = BigDecimal.valueOf(25), valorDois = BigDecimal.valueOf(0), '/');
         BigDecimal resultado = calculadoraService.resultado;
 
-        Assertions.assertEquals(resultado, null);
+        Assertions.assertEquals(null, resultado);
     }
 
 }

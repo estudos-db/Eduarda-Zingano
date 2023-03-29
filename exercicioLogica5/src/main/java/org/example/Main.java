@@ -13,7 +13,7 @@ public class Main {
         teclado.close();
 
         System.out.println("Tabuada do número: " + tabuada.getNumero());
-        multiplicar.Multiplica();
+        multiplicar.multiplica(tabuada.getNumero(), tabuada.getMultiplicador(), tabuada.getResultadoFinal());
 
 
 

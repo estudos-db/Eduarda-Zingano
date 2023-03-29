@@ -2,15 +2,14 @@ package org.example;
 
 public class TabuadaService {
 
-    public void Multiplica(int numero,int contador, int multiplicador, int resultadoFinal) {
+    public void multiplica(int numero, int multiplicador, int resultadoFinal) {
+         for (multiplicador = 1; multiplicador <= 10; multiplicador++) {
+                System.out.println(resultadoFinal = (numero  * multiplicador));
 
-        for ( multiplicador = numero; multiplicador <= numero; multiplicador++) {
-            for (contador = 1; contador <= 10; contador++)
-                System.out.println(resultadoFinal);
-            System.out.print(" ");
         }
-        System.out.println();
+
     }
+
 
 
 }

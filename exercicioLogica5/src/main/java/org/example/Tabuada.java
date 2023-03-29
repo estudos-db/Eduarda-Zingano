@@ -2,14 +2,11 @@ package org.example;
 
 public class Tabuada {
     private int numero;
-
-    private int contador;
     private int multiplicador;
-    private int resultadoFinal = (multiplicador * contador);
+    private int resultadoFinal;
 
-    public void Tabuada() {
+    public void Tabuada(int numero, int multiplicador, int resultadoFinal) {
         this.numero = numero;
-        this.contador = contador;
         this.multiplicador = multiplicador;
         this.resultadoFinal = resultadoFinal;
     }
@@ -21,15 +18,6 @@ public class Tabuada {
     public int setNumero(int numero) {
         this.numero = numero;
         return numero;
-    }
-
-    public int getContador() {
-        return contador;
-    }
-
-    public int setContador() {
-        this.contador = contador;
-        return contador;
     }
 
     public int getMultiplicador() {

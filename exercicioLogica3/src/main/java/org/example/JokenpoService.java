@@ -1,9 +1,10 @@
 package org.example;
 
 public class JokenpoService {
-    int maquina;
+    private int jogador = 2;
+    private int maquina;
 
-    public int jogadas(int jogador) {
+    public int jogada() {
         switch (jogador) {
             case 1 -> System.out.println("O Jogador escolheu Pedra");
             case 2 -> System.out.println("O Jogador escolheu Papel");

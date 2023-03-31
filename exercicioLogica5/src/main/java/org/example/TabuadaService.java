@@ -1,15 +1,20 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TabuadaService {
+    private int numero =  5;
+    private int multiplicador;
 
-    public void multiplica(int numero, int multiplicador, int resultadoFinal) {
-         for (multiplicador = 1; multiplicador <= 10; multiplicador++) {
-                System.out.println(resultadoFinal = (numero  * multiplicador));
-
+    private List<Integer> tabuada = new ArrayList<>();
+    public List<Integer> multiplica() {
+        for (int multiplicador = 1; multiplicador <= 10; multiplicador++) {
+            System.out.println(numero * multiplicador);
+            tabuada.add(multiplicador * numero);
         }
-
+        return tabuada;
     }
-
 
 
 }

@@ -12,16 +12,21 @@ class GeradorServiceTest {
    
 
     @Test
-    void verificaSeGeraArray() {
+    void verificaSeGeramNumerosNoArray() {
 
-        boolean geraArray = false;
-        int tamanhoArray = geradorService.geradorLista().length;
+        boolean numerosGerados = false;
+        int[] numerosArray = geradorService.geradorLista();
 
-        if (tamanhoArray == 10) {
-            geraArray = true;
+        for(int x = 0; x < numerosArray.length; x++){
+            if (numerosArray[x] >= 0){
+                numerosGerados = true;
+            }
         }
 
-        Assert.assertTrue(geraArray);
+
+        Assert.assertTrue(numerosGerados);
+
+
 
     }
 

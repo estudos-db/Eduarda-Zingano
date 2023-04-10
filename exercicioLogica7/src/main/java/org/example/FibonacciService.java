@@ -3,14 +3,12 @@ package org.example;
 import java.util.Arrays;
 
 public class FibonacciService {
-    private int numero = 9;
-
-    private int[] sequenciaFibo = new int[numero + 1];
-
-    private int x;
 
 
-    public int[] calculaSequenciaFibo() {
+
+    public int[] calculaSequenciaFibo(int numero) {
+        int[] sequenciaFibo = new int[numero + 1];
+        int x;
 
         sequenciaFibo[0] = 0;
         sequenciaFibo[1] = 1;

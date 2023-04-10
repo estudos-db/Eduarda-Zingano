@@ -14,6 +14,6 @@ public class FibonacciServiceTest {
 
     public void testaNumerosDoArray() {
 
-        Assert.assertEquals(Arrays.toString(arraySequenciaTest),Arrays.toString(fibonacciService.calculaSequenciaFibo()));
+        Assert.assertEquals(Arrays.toString(arraySequenciaTest),Arrays.toString(fibonacciService.calculaSequenciaFibo(9)));
     }
 }

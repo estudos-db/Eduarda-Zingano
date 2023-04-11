@@ -7,7 +7,6 @@ import java.util.List;
 public class FiboService {
 
     public int sequenciaFibonacci( int numero) {
-
         int x = 2;
 
 
@@ -23,12 +22,14 @@ public class FiboService {
             x++;
         }
 
-        if (Collections.max(sequenciaFibo) > numero){
+        if (numero < 0){
+            throw new IllegalArgumentException("Número inválido");
+
+        } else if (Collections.max(sequenciaFibo) > numero){
             sequenciaFibo.remove(Collections.max(sequenciaFibo));
+
         }
-
         System.out.println(Collections.max(sequenciaFibo));
-
         System.out.println(sequenciaFibo);
 
         return Collections.max(sequenciaFibo);

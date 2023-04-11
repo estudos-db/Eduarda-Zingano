@@ -19,6 +19,7 @@ public class LeitorService {
 
 
         }
+        System.out.println("Você digitou o número correto!");
         return x;
     }
 }

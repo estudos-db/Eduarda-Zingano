@@ -4,9 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Emprestimo emprestimo = new Emprestimo();
+        MenuUsuario menuUsuario = new MenuUsuario();
 
-        emprestimo.confereLivrosDisponiveis();
+        menuUsuario.confereLivrosDisponiveis();
+
 
     }
 }

@@ -5,6 +5,9 @@ import java.util.Arrays;
 
 public class Livro {
 
-    ArrayList <String> arrayLivrosNomes = new ArrayList<>(Arrays.asList("It - A Coisa", "Quatro estações", "Cemitério Maldito", "O Iluminado", "Cujo"));
+  private static ArrayList <String> arrayLivrosNomes = new ArrayList<>(Arrays.asList("It - A Coisa", "Quatro estações", "Cemitério Maldito", "O Iluminado", "Cujo"));
 
+  public ArrayList<String> getarrayLivrosNomes() {
+    return arrayLivrosNomes;
+  }
 }

@@ -23,16 +23,16 @@ public class MediaAlunoService {
     }
 
     public String statusAluno() {
-        String status = "";
+        String status;
 
         int mediaAluno = calculaMedia();
 
         if (mediaAluno > 6) {
-            status = "Aprovado.";
+            status = String.valueOf(Status.APROVADO.getDescricao());
         } else if (mediaAluno >= 4 && mediaAluno <= 6) {
-            status = "Verificiação suplementar.";
+            status = String.valueOf(Status.VERIFICACAO.getDescricao());
         } else {
-            status = "Reprovado.";
+            status = String.valueOf(Status.REPROVADO.getDescricao());
         }
 
         System.out.println("O status do aluno é: " + status);

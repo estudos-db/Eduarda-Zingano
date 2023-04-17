@@ -4,7 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MenuUsuario menuUsuario = new MenuUsuario();
+        Livro livro = new Livro();
+
+        Pessoa pessoa = new Pessoa();
+
+        Emprestimo emprestimo = new Emprestimo(livro, pessoa);
+
+        MenuUsuario menuUsuario = new MenuUsuario(emprestimo);
 
         menuUsuario.confereLivrosDisponiveis();
 

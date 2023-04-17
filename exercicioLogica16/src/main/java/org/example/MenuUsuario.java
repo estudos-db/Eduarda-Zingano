@@ -3,14 +3,22 @@ package org.example;
 import java.util.Scanner;
 
 public class MenuUsuario {
+
+
+    private final Emprestimo emprestimo;
+
+    public MenuUsuario(Emprestimo emprestimo) {
+        this.emprestimo = emprestimo;
+    }
+
     private int escolhaMenu;
+
     private int escolhaLivro;
 
     private int escolhaLivroDevolver;
     private Livro livro = new Livro();
 
     private Pessoa pessoa = new Pessoa();
-    private Emprestimo emprestimo = new Emprestimo();
     private Scanner scan = new Scanner(System.in);
 
     public void confereLivrosDisponiveis() {
@@ -47,7 +55,7 @@ public class MenuUsuario {
                         for (String l : livro.getarrayLivrosNomes()) {
                             System.out.println(((index++)) + ": " + l);
                         }
-                       escolhaLivro = scan.nextInt();
+                        escolhaLivro = scan.nextInt();
 
                         emprestimo.pegarLivroEmprestado(escolhaLivro);
 
@@ -76,7 +84,7 @@ public class MenuUsuario {
                             System.out.println(((index++)) + ": " + l);
                         }
 
-                       escolhaLivroDevolver = scan.nextInt();
+                        escolhaLivroDevolver = scan.nextInt();
 
                         emprestimo.devolverLivro(escolhaLivroDevolver);
 

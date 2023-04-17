@@ -7,7 +7,9 @@ import org.junit.jupiter.api.Test;
 
 public class EmprestimoTest {
 
-    Emprestimo emprestimo = new Emprestimo();
+
+
+    Emprestimo emprestimo;
 
 
     @Test

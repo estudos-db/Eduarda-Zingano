@@ -2,11 +2,14 @@ package org.example;
 
 public class Emprestimo {
 
+    private final Livro livro;
 
-    private Livro livro = new Livro();
+    private final Pessoa pessoa;
 
-    private Pessoa pessoa = new Pessoa();
-
+    public Emprestimo(Livro livro, Pessoa pessoa) {
+        this.livro = livro;
+        this.pessoa = pessoa;
+    }
 
     public boolean pegarLivroEmprestado(int escolhaUsuario) {
         if (escolhaUsuario <= livro.getarrayLivrosNomes().size() - 1) {
@@ -28,7 +31,7 @@ public class Emprestimo {
 
     public boolean devolverLivro(int escolhaUsuario) {
 
-          if (escolhaUsuario <= pessoa.getlivrosEmprestados().size() - 1) {
+        if (escolhaUsuario <= pessoa.getlivrosEmprestados().size() - 1) {
             livro.getarrayLivrosNomes().add(pessoa.getlivrosEmprestados().get(escolhaUsuario));
             pessoa.getlivrosEmprestados().remove(escolhaUsuario);
         }else if (escolhaUsuario == pessoa.getlivrosEmprestados().size() -1){

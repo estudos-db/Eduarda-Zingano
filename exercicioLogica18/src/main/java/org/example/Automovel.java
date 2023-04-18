@@ -1,6 +1,6 @@
 package org.example;
 
-public class Automovel {
+public abstract class Automovel {
 
     private String marca;
 

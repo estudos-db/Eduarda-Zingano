@@ -20,8 +20,16 @@ public class Guincho extends Automovel {
         return setAcelerar(true);
     }
 
-    public void guincharAutomovel(String getTipo, String getModelo) {
-        System.out.println("Seu automóvel " + getTipo + " modelo:" + getModelo + " foi guinchado(a)!");
+    public boolean guincharAutomovel(String getTipo, String getModelo) {
+        boolean guinchar;
+        if(getTipo == "guincho" || getTipo == "Guincho") {
+             guinchar = false;
+            System.out.println("O veículo " + getTipo + " não pode ser guinchado.");
+        } else {
+            guinchar = true;
+            System.out.println("Seu automóvel " + getTipo + " modelo: " + getModelo + " foi guinchado!");
+        }
 
+       return guinchar;
     }
 }

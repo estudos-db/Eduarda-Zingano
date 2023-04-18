@@ -7,16 +7,16 @@ public class MotoPartidaPedal extends Moto {
         setRodas(2);
     }
 
-    public void condicaoLigarMoto (boolean acelerar) {
+    public boolean condicaoLigarMoto (boolean acelerar) {
 
-        setLigarAutomovel(true);
-
-        if(setAcelerar(false)) {
+        if(acelerar == false) {
             setLigarAutomovel(false);
             System.out.println("O acelerador precisa estar puxado para ligar a moto!");
-        } else if(setAcelerar(true)) {
+        } else if(acelerar == true) {
+            ligarMoto();
             System.out.println("A moto está ligada!");
         }
+        return acelerar;
     }
 
 }

@@ -1,74 +1,33 @@
 package org.example;
 
+
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class PessoaTest {
-
-    private  Filho filho = new Filho();
-
-    private Mae mae = new Mae();
-
-    private Pai pai = new Pai();
+public class PessoaTest {
+    private Pessoa pessoa = new Pessoa("Carlos", 15, "Robson", "Joana");
 
     @Test
-    void verificaSeAtributosFilhoNaoEstaVazio(){
-        mae.mae();
-        pai.pai();
-        filho.filho();
+    public void verificaSePuxaFilho() {
 
-        boolean arrCheio = false;
-
-        String[] arrFilho = new String[] {filho.nome, filho.idade, filho.nomePai, filho.nomeMae};
-
-        for (int i = 0; i < arrFilho.length; i++){
-            if (arrFilho[i] != null){
-                arrCheio = true;
-                System.out.println(arrFilho[i]);
-            }
-        }
-
-        Assert.assertTrue(arrCheio);
+        Assert.assertEquals("Carlos", pessoa.getNome());
     }
 
     @Test
-    void verificaSeAtributosMaeNaoEstaVazio(){
-        mae.mae();
-        pai.pai();
-        filho.filho();
+    public void verificaSePuxaIdade() {
 
-        boolean arrCheio = false;
-
-        String[] arrMae = new String[] {mae.nome, mae.idade, mae.nomeMae, mae.nomePai, mae.nomeFilho};
-
-        for (int i = 0; i < arrMae.length; i++){
-            if (arrMae[i] != ""){
-                arrCheio = true;
-                System.out.println(arrMae[i]);
-            }
-        }
-
-        Assert.assertTrue(arrCheio);
+        Assert.assertEquals(15, pessoa.getIdade());
     }
 
     @Test
-    void verificaSeAtributosPaiNaoEstaVazio(){
-        mae.mae();
-        pai.pai();
-        filho.filho();
+    public void verificaSePuxaPai() {
 
-        boolean arrCheio = false;
-
-        String[] arrPai = new String[] {pai.nome, pai.idade, pai.nomePai, pai.nomeMae, pai.nomeFilho};
-
-        for (int i = 0; i < arrPai.length; i++){
-            if (arrPai[i] != ""){
-                arrCheio = true;
-                System.out.println(arrPai[i]);
-            }
-        }
-
-        Assert.assertTrue(arrCheio);
+        Assert.assertEquals("Robson", pessoa.getNomePai());
     }
 
+    @Test
+    public void verificaSePuxaMae() {
+
+        Assert.assertEquals("Joana", pessoa.getNomeMae());
+    }
 }

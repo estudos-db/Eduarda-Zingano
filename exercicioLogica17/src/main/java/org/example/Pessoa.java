@@ -1,33 +1,35 @@
 package org.example;
 
-import java.util.Arrays;
 
 public class Pessoa {
 
-    protected String nome;
-    protected String idade;
-    protected String nomePai;
-    protected String nomeMae;
-    protected String nomeFilho;
-
-    private static Filho filho = new Filho();
-
-    private static Pai pai = new Pai();
-
-    private static Mae mae = new Mae();
+    private String nome;
+    private int idade;
+    private String nomePai;
+    private String nomeMae;
 
 
-    public static void arvoreGenealogica() {
-
-        System.out.println("Pai: " + Arrays.toString(mae.mae()));
-
-        System.out.println("Mãe: " + Arrays.toString(pai.pai()));
-
-        System.out.println("Filho: " + Arrays.toString(filho.filho()));
-
-
-
+    public Pessoa(String nome, int idade, String nomePai, String nomeMae) {
+        this.nome = nome;
+        this.idade = idade;
+        this.nomePai = nomePai;
+        this.nomeMae = nomeMae;
     }
 
+    public String getNome() {
+        return nome;
+    }
 
+    public int getIdade() {
+        return idade;
+    }
+
+    public String getNomePai() {
+        return nomePai;
+    }
+
+    public String getNomeMae() {
+        return nomeMae;
+    }
 }
+

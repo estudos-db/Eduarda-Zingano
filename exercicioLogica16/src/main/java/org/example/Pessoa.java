@@ -1,13 +1,19 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Pessoa {
 
-    private static ArrayList<String> livrosEmprestados = new ArrayList<>(Arrays.asList("Jogo Perigoso", "Doutor Sono"));
+    private ArrayList<String> membros = new ArrayList<>();
+    private ArrayList<Integer> docBiblioteca = new ArrayList<>();
 
-    public ArrayList<String> getlivrosEmprestados() {
-        return livrosEmprestados;
+
+    public ArrayList<String> getPessoa() {
+        return membros;
+    }
+
+    public ArrayList<Integer> getDocBiblioteca() {
+        return docBiblioteca;
     }
 }

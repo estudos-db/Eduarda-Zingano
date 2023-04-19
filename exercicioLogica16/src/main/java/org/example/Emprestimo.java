@@ -1,53 +1,43 @@
 package org.example;
 
+
 public class Emprestimo {
+    private Livro livro;
 
-    private final Livro livro;
-
-    private final Pessoa pessoa;
+    private Pessoa pessoa;
 
     public Emprestimo(Livro livro, Pessoa pessoa) {
         this.livro = livro;
         this.pessoa = pessoa;
     }
 
-    public boolean pegarLivroEmprestado(int escolhaUsuario) {
-        if (escolhaUsuario <= livro.getarrayLivrosNomes().size() - 1) {
-            pessoa.getlivrosEmprestados().add(livro.getarrayLivrosNomes().get(escolhaUsuario));
-            livro.getarrayLivrosNomes().remove(escolhaUsuario);
-        } else if (escolhaUsuario == livro.getarrayLivrosNomes().size() -1) {
-            pessoa.getlivrosEmprestados().add(livro.getarrayLivrosNomes().get(escolhaUsuario));
-            livro.getarrayLivrosNomes().remove(escolhaUsuario);
-        }
 
-        boolean pegarLivroEmprestado = false;
+    public void pegarLivroEmprestado(String titulo, String autor, String nome, int documentoBiblioteca){
+        pessoa.getPessoa().add(nome);
+        pessoa.getDocBiblioteca().add(documentoBiblioteca);
 
-        if (livro.getarrayLivrosNomes().size() < 5 && pessoa.getlivrosEmprestados().size() > 2){
-            pegarLivroEmprestado = true;
-        }
-
-        return pegarLivroEmprestado;
-    }
-
-    public boolean devolverLivro(int escolhaUsuario) {
-
-        if (escolhaUsuario <= pessoa.getlivrosEmprestados().size() - 1) {
-            livro.getarrayLivrosNomes().add(pessoa.getlivrosEmprestados().get(escolhaUsuario));
-            pessoa.getlivrosEmprestados().remove(escolhaUsuario);
-        }else if (escolhaUsuario == pessoa.getlivrosEmprestados().size() -1){
-            livro.getarrayLivrosNomes().add(pessoa.getlivrosEmprestados().get(escolhaUsuario));
-            pessoa.getlivrosEmprestados().remove(escolhaUsuario);
-        }
-
-        boolean devolverLivro = false;
-
-        if (livro.getarrayLivrosNomes().size() > 5 && pessoa.getlivrosEmprestados().size() < 2){
-            devolverLivro = true;
-        }
-
-        return devolverLivro;
+        livro.getListaLivros().add(titulo + " " + autor);
 
     }
+
+    public void devolverLivro(int index) {
+        pessoa.getPessoa().remove(index);
+        pessoa.getDocBiblioteca().remove(index);
+
+        livro.getListaLivros().remove(index);
+
+        System.out.println("Livro " + index + " devolvido com sucesso");
+    }
+
+    public void mostrarEmprestimo() {
+        System.out.println("Sua lista de contatos: ");
+        for (int index = 0; index < pessoa.getPessoa().size(); index++ ) {
+            System.out.println(((index) + ": Membro biblioteca: " +pessoa.getPessoa().get(index) + ", documento da biblioteca: " + pessoa.getDocBiblioteca().get(index)) + " Livro escolhido: " + livro.getListaLivros().get(index));
+
+        }
+
+    }
+
 }
 
 

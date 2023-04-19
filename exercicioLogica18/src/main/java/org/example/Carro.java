@@ -13,7 +13,7 @@ public class Carro extends Automovel {
     }
 
     public boolean frearCarro () {
-        return setFrear(true);
+        return setFrear(false);
     }
 
     public boolean acelerarCarro() {

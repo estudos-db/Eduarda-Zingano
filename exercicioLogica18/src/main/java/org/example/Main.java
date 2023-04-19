@@ -11,10 +11,10 @@ public class Main {
 
         Guincho guincho = new Guincho("Volvo", "FH 540", 170, "Guincho");
 
-        guincho.guincharAutomovel(guincho.getTipo(),guincho.getModelo());
-        guincho.guincharAutomovel(carro.getTipo(),carro.getModelo());
+        guincho.guincharAutomovel(guincho);
+        guincho.guincharAutomovel(carro);
 
-        carroAutomatico.condicaoLigarCarro(true);
-        motoPartidaPedal.condicaoLigarMoto(true);
+        carroAutomatico.condicaoLigarCarro();
+        motoPartidaPedal.condicaoLigarMoto();
     }
 }

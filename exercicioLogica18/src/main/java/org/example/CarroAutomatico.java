@@ -8,17 +8,15 @@ public class CarroAutomatico extends Carro {
         setRodas(4);
     }
 
-    public boolean condicaoLigarCarro(boolean frear) {
+    public boolean condicaoLigarCarro() {
 
 
-        if (frear == false){
+        if (frearCarro() == false){
             System.out.println("O carro não pode ser ligado enquanto o freio não estiver acionado!");
-            setLigarAutomovel(false);
-        }else if(frear == true) {
-            ligarCarro();
+        }else if(frearCarro() == true) {
             System.out.println("O carro ligou!");
-            setFrear(false);
+
         }
-        return frear;
+        return frearCarro();
     }
 }

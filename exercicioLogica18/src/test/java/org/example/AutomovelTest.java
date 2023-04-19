@@ -42,10 +42,10 @@ public class AutomovelTest {
     }
 
     @Test
-    public void verificaSeMotoPartidaPedalNaoLiga() {
+    public void verificaSeMotoPartidaPedalLiga() {
        MotoPartidaPedal motoPartida = new MotoPartidaPedal("Yamaha", "Fazer", 150, "moto" );
 
-       Assert.assertFalse(motoPartida.condicaoLigarMoto(false));
+       Assert.assertTrue(motoPartida.condicaoLigarMoto());
 
     }
 
@@ -53,7 +53,7 @@ public class AutomovelTest {
     public void verificaSeCarroAutomaticaNaoLiga() {
        CarroAutomatico carroAutomatico = new CarroAutomatico("Toyota", "Corolla", 210, "carro");
 
-        Assert.assertFalse(carroAutomatico.condicaoLigarCarro(false));
+        Assert.assertFalse(carroAutomatico.condicaoLigarCarro());
 
     }
 
@@ -61,7 +61,7 @@ public class AutomovelTest {
     public void verificaSeGuinchoSoGuinchaCarroEMoto() {
         Guincho guincho = new Guincho("Volvo", "FH 540", 170, "Guincho");
 
-        Assert.assertFalse(guincho.guincharAutomovel(guincho.getTipo(),guincho.getModelo()));
+        Assert.assertFalse(guincho.guincharAutomovel(guincho));
 
     }
 

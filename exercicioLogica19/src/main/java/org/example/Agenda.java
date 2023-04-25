@@ -1,42 +1,56 @@
 package org.example;
 
 
+import java.util.ArrayList;
+
 public class Agenda {
 
     private Contato contato;
-    private Endereco endereco;
+    private ArrayList<String> contatosNomes = new ArrayList<>();
+    private ArrayList<Integer> contatosNumeros = new ArrayList<>();
+    private ArrayList<String> contatoEnderecos = new ArrayList<>();
 
-    public Agenda(Contato contato, Endereco endereco) {
-        this.contato = contato;
-        this.endereco = endereco;
-    }
 
-    public void adicionarContato (String nome, int numero, String rua, String bairro, String cidade, String cep) {
+    public void adicionarContato (Contato contato) {
 
-        contato.getContatosNomes().add(nome);
+        contatosNomes.add(contato.getNome());
 
-        contato.getContatosNumeros().add(numero);
+        contatosNumeros.add(contato.getNumero());
 
-        endereco.getEndereco().add(rua + ", " + bairro + ", " + cidade + ", " + cep);
+        contatoEnderecos.add(contato.getRua() + ", " + contato.getBairro() + ", " + contato.getCidade() + ", " + contato.getCep());
+
 
 
     }
 
 
     public void removerContato(int index) {
+        System.out.println("Contato " + contatosNomes.get(index) + " removido com sucesso");
 
-        contato.getContatosNomes().remove(index);
-        contato.getContatosNumeros().remove(index);
+        contatosNomes.remove(index);
+        contatosNumeros.remove(index);
 
-        System.out.println("Contato " + index + " removido com sucesso");
+
     }
 
     public void mostrarAgenda() {
         System.out.println("Sua lista de contatos: ");
-        for (int index = 0; index < contato.getContatosNomes().size(); index++ ) {
-            System.out.println(((index) + ": " + contato.getContatosNomes().get(index) + ": " + contato.getContatosNumeros().get(index)) + " Endereço: " + endereco.getEndereco().get(index));
+        for (int index = 0; index < contatosNomes.size(); index++ ) {
+            System.out.println(((index) + ": " + contatosNomes.get(index) + ": " + contatosNumeros.get(index)) + " Endereço: " + contatoEnderecos.get(index));
 
         }
 
+    }
+
+    public ArrayList<String> getContatosNomes() {
+        return contatosNomes;
+    }
+
+    public ArrayList<Integer> getContatosNumeros() {
+        return contatosNumeros;
+    }
+
+    public ArrayList<String> getContatoEnderecos() {
+        return contatoEnderecos;
     }
 }

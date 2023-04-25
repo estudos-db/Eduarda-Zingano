@@ -1,18 +1,43 @@
 package org.example;
 
-import java.util.ArrayList;
-
 public class Contato {
+    private String nome;
+    private int numero;
+    private String rua;
+    private String bairro;
+    private String cidade;
+    private String cep;
 
-    private ArrayList<String> contatosNomes = new ArrayList<>();
-    private ArrayList<Integer> contatosNumeros = new ArrayList<>();
-
-
-    public ArrayList<String> getContatosNomes() {
-        return contatosNomes;
+    public Contato(String nome, int numero, String rua, String bairro, String cidade, String cep) {
+        this.nome = nome;
+        this.numero = numero;
+        this.rua = rua;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.cep = cep;
     }
 
-    public ArrayList<Integer> getContatosNumeros() {
-        return contatosNumeros;
+    public String getNome() {
+        return nome;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getCep() {
+        return cep;
     }
 }

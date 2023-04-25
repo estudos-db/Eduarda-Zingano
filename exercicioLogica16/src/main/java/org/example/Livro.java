@@ -4,10 +4,27 @@ import java.util.ArrayList;
 
 public class Livro {
 
-  private ArrayList<String> listaLivros = new ArrayList<>();
+  private String titulo;
+  private String autor;
 
+  public Livro(String titulo, String autor) {
+    this.titulo = titulo;
+    this.autor = autor;
+  }
 
-  public ArrayList<String> getListaLivros() {
-    return listaLivros;
+  public String getTitulo() {
+    return titulo;
+  }
+
+  public void setTitulo(String titulo) {
+    this.titulo = titulo;
+  }
+
+  public String getAutor() {
+    return autor;
+  }
+
+  public void setAutor(String autor) {
+    this.autor = autor;
   }
 }

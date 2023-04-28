@@ -8,63 +8,38 @@ public class Emprestimo {
 
     private Pessoa pessoa;
 
-    private ArrayList<String> membros = new ArrayList<>();
-    private ArrayList<Integer> docBiblioteca = new ArrayList<>();
+    private ArrayList<Livro> listaLivros;
 
-    private ArrayList<String> listaLivros = new ArrayList<>();
+    public Emprestimo(Livro livro, Pessoa pessoa) {
+        this.livro = livro;
+        this.pessoa = pessoa;
+        this.listaLivros = new ArrayList<>();
+    }
 
-
-
-    public void pegarLivroEmprestado(Livro livro, Pessoa pessoa){
-        membros.add(pessoa.getNome());
-        docBiblioteca.add(pessoa.getDocBiblioteca());
-
-        listaLivros.add(livro.getTitulo() + " de " + livro.getAutor());
-
+    public void adicionaLivroNaLista() {
+        listaLivros.add(livro);
     }
 
     public void devolverLivro(int index) {
-        System.out.println("Livro " + listaLivros.get(index) + " que foi emprestado para "+ membros.get(index) + " foi devolvido com sucesso");
-
-        membros.remove(index);
-        docBiblioteca.remove(index);
-
+        System.out.println("Livro " + livro.getTitulo() + " removido com sucesso");
         listaLivros.remove(index);
 
-
     }
 
-    public void mostrarEmprestimo() {
-        System.out.println("Lista de livros emprestados: ");
-        for (int index = 0; index < membros.size(); index++ ) {
-            System.out.println(((index) + ": Membro biblioteca: " +membros.get(index) + ", documento da biblioteca: " + docBiblioteca.get(index)) + " Livro escolhido: " + listaLivros.get(index));
+    public void mostrarEmprestimos() {
+        if(listaLivros.isEmpty()) {
+            System.out.println("lista vazia");
+        }else {
+            System.out.println("Lista de livros emprestados: ");
+            for (int index = 0; index < listaLivros.size(); index++) {
+                System.out.println(((index) + ": Livro " + listaLivros.get(index).getTitulo() + ", do autor " + listaLivros.get(index).getAutor() + " emprestado para: " + pessoa.getNome() + " com documento de biblioteca: " + pessoa.getDocBiblioteca()));
 
+            }
         }
-
     }
 
-    public ArrayList<String> getMembros() {
-        return membros;
-    }
-
-    public void setMembros(ArrayList<String> membros) {
-        this.membros = membros;
-    }
-
-    public ArrayList<Integer> getDocBiblioteca() {
-        return docBiblioteca;
-    }
-
-    public void setDocBiblioteca(ArrayList<Integer> docBiblioteca) {
-        this.docBiblioteca = docBiblioteca;
-    }
-
-    public ArrayList<String> getListaLivros() {
+    public ArrayList<Livro> getListaLivros() {
         return listaLivros;
-    }
-
-    public void setListaLivros(ArrayList<String> listaLivros) {
-        this.listaLivros = listaLivros;
     }
 }
 

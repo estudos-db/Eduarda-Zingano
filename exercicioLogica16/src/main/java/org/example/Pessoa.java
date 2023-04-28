@@ -1,7 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
-
 
 public class Pessoa {
 
@@ -28,4 +26,6 @@ public class Pessoa {
     public void setDocBiblioteca(Integer docBiblioteca) {
         this.docBiblioteca = docBiblioteca;
     }
+
+
 }

@@ -4,35 +4,37 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 
-
 public class EmprestimoTest {
-    private Emprestimo emprestimo = new Emprestimo();
+    private Livro livroCm = new Livro("Cemitério Maldito", "Stephen King");
+
+    private  Pessoa pessoa = new Pessoa("Lucas", 3567);
+
+    private Emprestimo emprestimo = new Emprestimo(livroCm, pessoa);
+
 
 
     @Test
     public void verificaSePegaLivro() {
-        emprestimo.pegarLivroEmprestado(new Livro("O Iluminado", "Stephen King"), new Pessoa("Lucas", 3567));
-        emprestimo.pegarLivroEmprestado(new Livro("Cemitério Maldito", "Stephen King"), new Pessoa("Neusa", 3345));
-
-        Assert.assertEquals(2, emprestimo.getMembros().size());
+        emprestimo.adicionaLivroNaLista();
+        Assert.assertEquals(1, emprestimo.getListaLivros().size());
     }
 
     @Test
     public void verificaSeTemAlgoNaLista() {
-        emprestimo.pegarLivroEmprestado(new Livro("Carrie", "Stephen King"), new Pessoa("Vick", 2435));
+        emprestimo.adicionaLivroNaLista();
 
-        Assert.assertEquals("Vick", emprestimo.getMembros().get(0));
+        Assert.assertTrue(emprestimo.getListaLivros().stream().anyMatch(livro -> livro.getTitulo().contains("Cemitério Maldito")));
     }
 
 
     @Test
     public void verificaSeDevolveLivro() {
-        emprestimo.pegarLivroEmprestado(new Livro("Cujo", "Stephen King"), new Pessoa("Juliano", 4389));
-        emprestimo.pegarLivroEmprestado(new Livro("Jogo Perigoso", "Stephen King"), new Pessoa("Vanessa", 4809));
-        emprestimo.pegarLivroEmprestado(new Livro("Saco de ossos", "Stephen King"), new Pessoa("Rose", 5608));
+        emprestimo.adicionaLivroNaLista();
+        emprestimo.devolverLivro(0);
+
+        Assert.assertEquals(0, emprestimo.getListaLivros().size());
 
 
-        emprestimo.devolverLivro(1);
-        Assert.assertEquals(2, emprestimo.getMembros().size());
+
     }
 }

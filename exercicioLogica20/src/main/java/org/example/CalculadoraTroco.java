@@ -1,11 +1,14 @@
 package org.example;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CalculadoraTroco {
     public static double calculaTroco(double pagamento, double valorPedido){
         return pagamento - valorPedido;
     }
 
-    public static void calculaNotasEMoedas(double troco){
+    public static Map<Number, Number> calculaNotasEMoedas(double troco){
         System.out.println(String.format("\nTroco: R$ %.2f ", troco));
 
         int notas200, notas100, notas50, notas20, notas10, notas5, notas2, notas1, moedas50Cent, moedas25Cent, moedas10Cent, moedas5Cent, moedas1Cent;
@@ -109,7 +112,14 @@ public class CalculadoraTroco {
         System.out.println("Total de notas mínimas para troco : " + totalNotas);
         System.out.println("Total de moedas mínimas para troco : " + totalMoedas);
 
+        Map<Number,Number> notasEMoedas = new HashMap<>();
+
+        notasEMoedas.put(totalNotas,totalMoedas);
+        return notasEMoedas;
+
     }
+
+
 
 
 }

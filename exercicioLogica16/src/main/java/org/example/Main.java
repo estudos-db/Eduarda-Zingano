@@ -14,10 +14,9 @@ public class Main {
         Emprestimo emprestimo =  new Emprestimo(livroDs, pessoa1);
         Emprestimo emprestimo1 = new Emprestimo(livroIt, pessoa2);
 
-        emprestimo.adicionaLivroNaLista();
-        emprestimo1.adicionaLivroNaLista();
 
-        System.out.println(emprestimo1.getListaLivros());
+        emprestimo.adicionaLivroNaLista(livroDs);
+        emprestimo1.adicionaLivroNaLista(livroIt);
 
 
         emprestimo.mostrarEmprestimos();

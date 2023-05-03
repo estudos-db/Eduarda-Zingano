@@ -15,13 +15,13 @@ public class EmprestimoTest {
 
     @Test
     public void verificaSePegaLivro() {
-        emprestimo.adicionaLivroNaLista();
+        emprestimo.adicionaLivroNaLista(livroCm);
         Assert.assertEquals(1, emprestimo.getListaLivros().size());
     }
 
     @Test
     public void verificaSeTemAlgoNaLista() {
-        emprestimo.adicionaLivroNaLista();
+        emprestimo.adicionaLivroNaLista(livroCm);
 
         Assert.assertTrue(emprestimo.getListaLivros().stream().anyMatch(livro -> livro.getTitulo().contains("Cemitério Maldito")));
     }
@@ -29,7 +29,7 @@ public class EmprestimoTest {
 
     @Test
     public void verificaSeDevolveLivro() {
-        emprestimo.adicionaLivroNaLista();
+        emprestimo.adicionaLivroNaLista(livroCm);
         emprestimo.devolverLivro(0);
 
         Assert.assertEquals(0, emprestimo.getListaLivros().size());

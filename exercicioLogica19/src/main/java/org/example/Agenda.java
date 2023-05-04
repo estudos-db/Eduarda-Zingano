@@ -1,29 +1,24 @@
 package org.example;
 
-
 import java.util.ArrayList;
 
-
 public class Agenda {
-    private Contato contatoPrincipal;
+
     private ArrayList<Contato> contatos;
 
-    public Agenda() {
+    public Agenda(ArrayList<Contato>contatos) {
         this.contatos = new ArrayList<>();
 
     }
 
     public void adicionarContato(Contato contato) {
-        this.contatoPrincipal = contato;
         contatos.add(contato);
     }
 
 
-
     public void removerContato(int index) {
-        System.out.println("Contato " + contatoPrincipal.getNome()  + " removido com sucesso");
+        System.out.println("Contato " + contatos.get(index).getNome()  + " removido com sucesso");
         contatos.remove(index);
-
 
     }
 

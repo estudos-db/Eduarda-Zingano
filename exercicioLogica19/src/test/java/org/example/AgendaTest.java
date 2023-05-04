@@ -3,35 +3,35 @@ package org.example;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class AgendaTest {
-    private Agenda agenda = new Agenda();
-
+    private Contato contato =  new Contato("Raimundo", "40028922", "São Joaquim", "Liberdade", "São Paulo", "01508001");
+    private Agenda agenda = new Agenda(new ArrayList<>(Arrays.asList(contato)));
 
 
     @Test
     public void verificaSeAdicionaContato() {
-        agenda.adicionarContato(new Contato("Cláudio", "123344565", "Estr. João de Oliveira Remião", "Agronomia", "Porto Alegre", "91550000"));
-        agenda.adicionarContato(new Contato("Raimundo", "40028922", "São Joaquim", "Liberdade", "São Paulo", "01508001"));
+        agenda.adicionarContato(contato);
 
-        Assert.assertEquals(2, agenda.getContatos().size());
+        Assert.assertEquals(1, agenda.getContatos().size());
     }
 
     @Test
     public void verificaSeTemAlgoNoContato() {
-        agenda.adicionarContato(new Contato("Cláudio", "123344565", "Estr. João de Oliveira Remião", "Agronomia", "Porto Alegre", "91550000"));
+        agenda.adicionarContato(contato);
 
-        Assert.assertTrue(agenda.getContatos().stream().anyMatch(contato -> contato.getNome().contains("Cláudio")));
+        Assert.assertTrue(agenda.getContatos().stream().anyMatch(contato -> contato.getNome().contains("Raimundo")));
     }
 
     @Test
     public void verificaSeDeletaContato() {
-        agenda.adicionarContato(new Contato("Cláudio", "123344565", "Estr. João de Oliveira Remião", "Agronomia", "Porto Alegre", "91550000"));
-        agenda.adicionarContato(new Contato("Raimundo","40028922", "São Joaquim", "Liberdade", "São Paulo", "01508001"));
+        agenda.adicionarContato(contato);
 
-        agenda.removerContato(1);
-        Assert.assertEquals(1, agenda.getContatos().size());
+        agenda.removerContato(0);
+        Assert.assertEquals(0, agenda.getContatos().size());
     }
 
 }

@@ -88,9 +88,8 @@ public class Pedido {
             estoque.darBaixaNoEstoque(nome, quantidade);
             System.out.println("Item adicionado com sucesso.");
         }
-
         else
-            System.out.println("Não foi possivel adicionar o item.");
+            throw new RuntimeException("Não foi possível encontrar o produto " + nome);
     }
 
     public String recebeNomeDoTeclado(){

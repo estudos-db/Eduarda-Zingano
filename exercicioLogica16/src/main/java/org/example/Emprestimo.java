@@ -9,7 +9,7 @@ public class Emprestimo {
 
     private ArrayList<Livro> listaLivros;
 
-    public Emprestimo(Livro livro, Pessoa pessoa) {
+    public Emprestimo(ArrayList<Livro> listaLivros, Pessoa pessoa) {
         this.pessoa = pessoa;
         this.listaLivros = new ArrayList<>();
     }

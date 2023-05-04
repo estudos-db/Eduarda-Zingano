@@ -3,13 +3,16 @@ package org.example;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 public class EmprestimoTest {
     private Livro livroCm = new Livro("Cemitério Maldito", "Stephen King");
 
     private  Pessoa pessoa = new Pessoa("Lucas", 3567);
 
-    private Emprestimo emprestimo = new Emprestimo(livroCm, pessoa);
+    private Emprestimo emprestimo = new Emprestimo(new ArrayList<>(Arrays.asList(livroCm)), pessoa);
 
 
 

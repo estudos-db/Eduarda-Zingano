@@ -1,5 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -11,8 +15,8 @@ public class Main {
         Pessoa pessoa2 = new Pessoa("Julia", 5689);
 
 
-        Emprestimo emprestimo =  new Emprestimo(livroDs, pessoa1);
-        Emprestimo emprestimo1 = new Emprestimo(livroIt, pessoa2);
+        Emprestimo emprestimo =  new Emprestimo(new ArrayList<>(Arrays.asList(livroDs)), pessoa1);
+        Emprestimo emprestimo1 = new Emprestimo(new ArrayList<>(Arrays.asList(livroIt)), pessoa2);
 
 
         emprestimo.adicionaLivroNaLista(livroDs);

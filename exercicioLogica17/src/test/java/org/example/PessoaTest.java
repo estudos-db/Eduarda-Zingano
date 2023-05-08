@@ -5,29 +5,33 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class PessoaTest {
-    private Pessoa pessoa = new Pessoa("Carlos", 15, "Robson", "Joana");
+    private Mae mae = new Mae("Patricia", 43, null, null);
+
+    private Pai pai = new Pai("Valmor", 48, null, null);
+
+    private Pessoa filho = new Pessoa("Eduarda", 21, pai, mae);
 
     @Test
     public void verificaSePuxaFilho() {
 
-        Assert.assertEquals("Carlos", pessoa.getNome());
+        Assert.assertEquals("Eduarda", filho.getNome());
     }
 
     @Test
     public void verificaSePuxaIdade() {
 
-        Assert.assertEquals(15, pessoa.getIdade());
+        Assert.assertEquals(21, filho.getIdade());
     }
 
     @Test
     public void verificaSePuxaPai() {
 
-        Assert.assertEquals("Robson", pessoa.getNomePai());
+        Assert.assertEquals("Valmor", pai.getNome());
     }
 
     @Test
     public void verificaSePuxaMae() {
 
-        Assert.assertEquals("Joana", pessoa.getNomeMae());
+        Assert.assertEquals("Patricia", mae.getNome());
     }
 }

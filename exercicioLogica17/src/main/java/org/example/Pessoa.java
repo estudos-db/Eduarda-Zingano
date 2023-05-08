@@ -5,15 +5,15 @@ public class Pessoa {
 
     private String nome;
     private int idade;
-    private String nomePai;
-    private String nomeMae;
+    private Pai pai;
+    private Mae mae;
 
 
-    public Pessoa(String nome, int idade, String nomePai, String nomeMae) {
+    public Pessoa(String nome, int idade, Pai pai , Mae mae ) {
         this.nome = nome;
         this.idade = idade;
-        this.nomePai = nomePai;
-        this.nomeMae = nomeMae;
+        this.pai = pai;
+        this.mae = mae;
     }
 
     public String getNome() {
@@ -24,12 +24,14 @@ public class Pessoa {
         return idade;
     }
 
-    public String getNomePai() {
-        return nomePai;
+    public Pessoa getNomePai() {
+        return pai;
     }
 
-    public String getNomeMae() {
-        return nomeMae;
+    public Pessoa getNomeMae() {
+        return mae;
     }
+
+
 }
 

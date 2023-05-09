@@ -5,9 +5,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class PessoaTest {
-    private Mae mae = new Mae("Patricia", 43, null, null);
+    private Pessoa mae = new Pessoa("Patricia", 43, null, null);
 
-    private Pai pai = new Pai("Valmor", 48, null, null);
+    private Pessoa pai = new Pessoa("Valmor", 48, null, null);
 
     private Pessoa filho = new Pessoa("Eduarda", 21, pai, mae);
 
@@ -33,5 +33,12 @@ public class PessoaTest {
     public void verificaSePuxaMae() {
 
         Assert.assertEquals("Patricia", mae.getNome());
+    }
+
+    @Test
+    public void verificaSeTemAlgoNaLista() {
+        filho.gerarListaFamilia();
+
+        Assert.assertEquals("[Eduarda, Valmor, Patricia]", filho.gerarListaFamilia().toString());
     }
 }

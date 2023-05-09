@@ -1,15 +1,18 @@
 package org.example;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pessoa {
 
     private String nome;
     private int idade;
-    private Pai pai;
-    private Mae mae;
+    private Pessoa pai;
+    private Pessoa mae;
 
 
-    public Pessoa(String nome, int idade, Pai pai , Mae mae ) {
+    public Pessoa(String nome, int idade, Pessoa pai , Pessoa mae ) {
         this.nome = nome;
         this.idade = idade;
         this.pai = pai;
@@ -30,6 +33,18 @@ public class Pessoa {
 
     public Pessoa getNomeMae() {
         return mae;
+    }
+
+    public List<String> gerarListaFamilia() {
+        List<String> membrosFamilia = new ArrayList<>();
+        membrosFamilia.add(this.nome);
+        if (this.pai != null) {
+            membrosFamilia.addAll(this.pai.gerarListaFamilia());
+        }
+        if (this.mae != null) {
+            membrosFamilia.addAll(this.mae.gerarListaFamilia());
+        }
+        return membrosFamilia;
     }
 
 

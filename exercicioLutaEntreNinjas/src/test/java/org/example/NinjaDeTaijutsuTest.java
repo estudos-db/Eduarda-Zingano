@@ -16,16 +16,17 @@ class NinjaDeTaijutsuTest {
         Jutsu jutsuNeji = new Jutsu("Oito Trigramas Sessenta e Quatro Palmas",65, 101);
         neji.adicionarJutsu("Oito Trigramas Sessenta e Quatro Palmas", jutsuNeji);
 
-        Assert.assertFalse(neji.usarJutsu(neji, jutsuNeji, gaara));
+        Assert.assertFalse(neji.usarJutsu(neji, jutsuNeji.getNome(), gaara, gaara.desviar(gaara, jutsuNeji.getNome(), neji)));
     }
+
 
     @Test
     void verificaSeTiraVidaDoInimigo() {
-        Jutsu jutsuNeji = new Jutsu("Oito Trigramas Sessenta e Quatro Palmas",80, 10);
+        Jutsu jutsuNeji = new Jutsu("Oito Trigramas Sessenta e Quatro Palmas",65, 10);
         neji.adicionarJutsu("Oito Trigramas Sessenta e Quatro Palmas", jutsuNeji);
-        neji.usarJutsu(neji, jutsuNeji, gaara);
+        neji.usarJutsu(neji, jutsuNeji.getNome(), gaara, gaara.desviar(gaara, jutsuNeji.getNome(), neji));
 
-        Assert.assertEquals(20, gaara.getVida());
+        Assert.assertEquals(35, gaara.getVida());
     }
 
 

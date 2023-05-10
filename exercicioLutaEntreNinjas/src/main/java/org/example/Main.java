@@ -14,8 +14,7 @@ public class Main {
         gaara.adicionarJutsu("Chuva de Areia", jutsuGaara);
 
 
-        neji.usarJutsu(neji, jutsuNeji, gaara);
-        gaara.desviar(gaara, jutsuNeji, neji);
+        neji.usarJutsu(neji, jutsuNeji.getNome(), gaara, gaara.desviar(gaara, jutsuNeji.getNome(), neji));
         System.out.println("A vida atual do personagem " + gaara.getNome() + " é: " + gaara.getVida());
 
     }
